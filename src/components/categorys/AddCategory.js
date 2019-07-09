@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Redirect, Link } from 'react-router-dom'
+//import { Redirect, Link } from 'react-router-dom'
 
 class AddCategory extends Component {
   constructor(props){

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import Info from './misc/info';
 
 class Home extends Component {
     render(){
@@ -9,7 +10,8 @@ class Home extends Component {
             <h1 className="display-4">Componente principal</h1>
             <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
             <hr className="my-4"/>
-            <h3>Categorías <Link to="/categorys" className="btn btn-primary">Nueva Categoría</Link></h3>
+            <h3> <Link to="/categorys" className="btn btn-primary">Ver Categorías</Link></h3>
+            <Info />
           </div>
           
           

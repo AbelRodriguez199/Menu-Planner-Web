@@ -71,8 +71,8 @@ class RecipeDetails extends Component {
         <p>{this.state.measure}</p>
         {/* show the ingredient heading only if there are ingredients */}</div>
 
-        <a className="d-flex align-items-center btn btn-primary text-center text-white text-wrap font-weight-bold mb-2" onClick={() => this.deleteRecipe()}>Borrar Receta {/* <== !!! */}</a>
-        <a className="d-flex align-items-center btn btn-primary text-center text-white text-wrap font-weight-bold" >{this.renderAddIngredientForm()}</a>
+        <small className="d-flex align-items-center btn btn-primary text-center text-white text-wrap font-weight-bold mb-2" onClick={() => this.deleteRecipe()}>Borrar Receta {/* <== !!! */}</small>
+        <small className="d-flex align-items-center btn btn-primary text-center text-white text-wrap font-weight-bold" >{this.renderAddIngredientForm()}</small>
   </div>
 </div>
 </div>

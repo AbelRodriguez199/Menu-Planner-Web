@@ -30,7 +30,7 @@ class CategoryList extends Component {
             return (
               <div className="card-title btn-secondary" key={category._id}>
                 <Link to={`/categorys/${category._id}`}>
-                  <h3 className="card-header btn-body text-light" >{category.title}     <span className="badge badge-primary badge-pill btn-dark">{category.recipes.length}<a> Recetas</a></span></h3>
+                  <h3 className="card-header btn-body text-light" >{category.title}     <span className="badge badge-primary badge-pill btn-dark">{category.recipes.length}<small href="###"> Recetas</small></span></h3>
                 </Link>
                 {/* 🥁 added so the recipes can be displayed:  🥁 */}
                 <ul className="list-group list-group-horizontal ml-4" >

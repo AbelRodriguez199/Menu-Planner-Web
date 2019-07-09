@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App">
        <Navbar />
-       <main className="container-fluid align-middle">
+       <main className="container-fluid align-middle">      
         <Switch>
           <Route exact path="/categorys" component={CategoryList}/>
           <Route exact path="/categorys/:id" component={CategoryDetails} />
@@ -22,6 +22,7 @@ class App extends Component {
           <Route exact path="/categorys/:id/recipes/:recipeId/ingredients/:ingredientId" component={IngredientDetails} /> {/* <== !!! */}
           <Route exact path="/" component={Home} />
         </Switch>
+     
         </main>
       </div>
     );

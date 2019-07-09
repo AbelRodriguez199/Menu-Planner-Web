@@ -70,8 +70,8 @@ class CategoryDetails extends Component {
         <p>{this.state.description}</p>
         {/* show the recipe heading only if there are recipes */}</div>
 
-        <a className="d-flex align-items-center btn btn-primary text-center text-white text-wrap font-weight-bold mb-2" onClick={() => this.deleteCategory()}>Borrar Categoría {/* <== !!! */}</a>
-        <a className="d-flex align-items-center btn btn-primary text-center text-white text-wrap font-weight-bold" >{this.renderAddRecipeForm()}</a>
+        <small className="d-flex align-items-center btn btn-primary text-center text-white text-wrap font-weight-bold mb-2" onClick={() => this.deleteCategory()}>Borrar Categoría {/* <== !!! */}</small>
+        <small className="d-flex align-items-center btn btn-primary text-center text-white text-wrap font-weight-bold" >{this.renderAddRecipeForm()}</small>
   </div>
 </div>
 </div>
