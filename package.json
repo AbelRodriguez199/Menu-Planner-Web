@@ -1,11 +1,12 @@
 {
-  "name": "menu-planner-client",
+  "name": "menu-planner-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
+    "font-awesome": "^4.7.0",
     "primeicons": "^1.0.0",
     "primereact": "^3.1.4",
     "react": "^16.8.6",
