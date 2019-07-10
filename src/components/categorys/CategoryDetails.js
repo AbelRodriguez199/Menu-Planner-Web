@@ -30,19 +30,17 @@ class CategoryDetails extends Component {
     if(!this.state.title){
       this.getSingleCategory();
     } else {
-    //                                                    {...props} => so we can have 'this.props.history' in Edit.js
-    //                                                                                          ^
-    //                                                                                          |
+                                                                                           
       return <EditCategory theCategory={this.state} getTheCategory={this.getSingleCategory} {...this.props} />
     }
   }
 
-// DELETE Category:
+// BORRAR Category:
   deleteCategory = () => {
     const { params } = this.props.match;
     axios.delete(`http://localhost:5000/api/categorys/${params.id}`)
     .then( () =>{
-        this.props.history.push('/categorys'); // !!!         
+        this.props.history.push('/categorys');        
     })
     .catch((err)=>{
         console.log(err)
@@ -53,7 +51,7 @@ class CategoryDetails extends Component {
     if(!this.state.title){
         this.getSingleCategory();
       } else {     
-                // pass the category and method getSingleCategory() as a props down to AddRecipe component
+                // pasa la categoría y el método getSingleCategory () como props al componente AddRecipe
         return <AddRecipe theCategory={this.state} getTheCategory={this.getSingleCategory} />
       }
   }
@@ -68,27 +66,32 @@ class CategoryDetails extends Component {
 <div className="p-2 bd-highlight"><h1>{this.state.title}</h1>
 <div className="card-body">
         <p>{this.state.description}</p>
-        {/* show the recipe heading only if there are recipes */}</div>
+        {/* muestra el encabezado de las recetas solo si hay recetas */}</div>
 
-        <small className="d-flex align-items-center btn btn-primary text-center text-white text-wrap font-weight-bold mb-2" onClick={() => this.deleteCategory()}>Borrar Categoría {/* <== !!! */}</small>
-        <small className="d-flex align-items-center btn btn-primary text-center text-white text-wrap font-weight-bold" >{this.renderAddRecipeForm()}</small>
+        {/* Botón Añadir Receta Nueva */}
+        <small className="d-flex align-items-center btn" >{this.renderAddRecipeForm()}</small>
+        
+        {/* Botón Borrar Categoría */}
+        <button class="btn btn-danger" onClick={() => this.deleteCategory()}>
+          <i class="fa fa-trash-o fa-lg"></i> Borrar Categoría</button>
+        
   </div>
 </div>
 </div>
 </div>
-        <table className="table">
+        <table className="table table-striped">
   <thead>
     <tr>
-      <th scope="col">{ this.state.recipes && this.state.recipes.length > 0 && <h3>Recetas de {this.state.title} </h3> }
-        {/* map through the array of recipes and... */}</th>
+      <th scope="col">{ this.state.recipes && this.state.recipes.length > 0 && <h3 className="display-4 p-0 mb-2 bg-dark text-white">Recetas de {this.state.title} </h3> }
+        {/* map que recorre el array de recetas y... */}</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr >
       <td>{ this.state.recipes && this.state.recipes.map((recipe, index) => {
             return(
                 <div key={ index }>
-                {/* ... make each recipe's title a link that goes to the recipe details page */}
+                {/* ... hacer de cada titulo de receta un link que lleve a la pápgina de detalle recetas*/}
                     <Link to={`/categorys/${this.state._id}/recipes/${recipe._id}`}> 
                         { recipe.title }
                     </Link>
@@ -99,6 +102,7 @@ class CategoryDetails extends Component {
     </tr>    
   </tbody>
 </table>
+        {/* Modificar Categoría */}
         <div>{this.renderEditForm()} </div>
         <br/>
       

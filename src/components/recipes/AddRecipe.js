@@ -3,8 +3,8 @@ import axios from 'axios';
 
 class AddRecipe extends Component {
   constructor(props){
-      super(props);          //             will help us to toggle add recipe form   
-                            //                      |
+      super(props);               
+                            
       this.state = { title: "", description: "", isShowing: false };
   }
    
@@ -12,16 +12,12 @@ class AddRecipe extends Component {
     event.preventDefault();
     const title = this.state.title;
     const description = this.state.description;
-    const categoryID = this.props.theCategory._id; // <== we need to know to which category the created recipe belong, so we need to get its 'id'
-                                                // it has to be the 'id' because we are referencing category
-                                                // by its id in the recipe model on the server side ( category: {type: Schema.Types.ObjectId, ref: 'Category'})
+    const categoryID = this.props.theCategory._id; // para saber con que categoría fué creada esta receta
+                                               
     
-    // { title, description, categoryID } => this is 'req.body' that will be received on the server side in this route, 
-    // so the names have to match
+    
     axios.post("http://localhost:5000/api/recipes", { title, description, categoryID })
     .then( () => {
-          // after submitting the form, retrieve category one more time so the new recipe is displayed as well 
-          //              |
         this.props.getTheCategory();
         this.setState({title: "", description: ""});
     })
@@ -45,14 +41,13 @@ class AddRecipe extends Component {
     if(this.state.isShowing){
         return(
             <div>
-                  <h3>Añadir Receta</h3>
                   <form onSubmit={this.handleFormSubmit}>
-                  <label>Title:</label>
+                  <label>Nombre:</label>
                   <input type="text" name="title" value={this.state.title} onChange={ e => this.handleChange(e)}/>
-                  <label>Description:</label>
-                  <textarea name="description" value={this.state.description} onChange={ e => this.handleChange(e)} />
+                  <label>Descripción:</label>
+                  <input type="text" name="description" value={this.state.description} onChange={ e => this.handleChange(e)} />
                   
-                  <input type="submit" value="Submit" />
+                  <input type="submit" value="Añadir" />
                   </form>
             </div>
           )
@@ -62,8 +57,8 @@ class AddRecipe extends Component {
   render(){
     return(
       <div>
-            <hr />
-            <button onClick={() => this.toggleForm()}> Añadir Receta </button>
+            <button className="btn btn-info" onClick={() => this.toggleForm()}> 
+             <i class="fa fa-plus-circle fa-lg"></i> Añadir Receta </button>
             { this.showAddRecipeForm() }
       </div>
     )

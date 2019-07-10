@@ -3,8 +3,8 @@ import axios from 'axios';
 
 class AddIngredient extends Component {
   constructor(props){
-      super(props);          //             will help us to toggle add recipe form   
-                            //                      |
+      super(props);       
+                           
       this.state = { name: "", quantity: "", measure: "", isShowing: false };
   }
    
@@ -14,15 +14,11 @@ class AddIngredient extends Component {
     const quantity = this.state.quantity;
     const measure = this.state.measure;
     const recipeID = this.props.theRecipe._id; // <== we need to know to which recipe the created recipe belong, so we need to get its 'id'
-                                                // it has to be the 'id' because we are referencing recipe
-                                                // by its id in the recipe model on the server side ( recipe: {type: Schema.Types.ObjectId, ref: 'Recipe'})
+                                                
     
-    // { title, description, recipeID } => this is 'req.body' that will be received on the server side in this route, 
-    // so the names have to match
+    
     axios.post("http://localhost:5000/api/ingredients", { name, quantity, measure, recipeID })
     .then( () => {
-          // after submitting the form, retrieve recipe one more time so the new ingredient is displayed as well 
-          //              |
         this.props.getTheRecipe();
         this.setState({name: "", quantity: "", measure: ""});
     })
@@ -46,7 +42,7 @@ class AddIngredient extends Component {
     if(this.state.isShowing){
         return(
             <div>
-                  <h3>Añadir Ingrediente</h3>
+                  
                   <form onSubmit={this.handleFormSubmit}>
                   <label>Nombre</label>
                   <input type="text" name="name" value={this.state.name} onChange={ e => this.handleChange(e)}/>
@@ -66,8 +62,8 @@ class AddIngredient extends Component {
   render(){
     return(
       <div>
-            <hr />
-            <button onClick={() => this.toggleForm()}> Añadir Ingrediente </button>
+            <button className="btn btn-info" onClick={() => this.toggleForm()}> 
+            <i class="fa fa-plus-circle fa-lg"></i> Añadir Ingrediente </button>
             { this.showAddIngredientForm() }
       </div>
     )

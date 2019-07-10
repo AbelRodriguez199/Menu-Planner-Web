@@ -25,21 +25,21 @@ class CategoryList extends Component {
   render(){
     return(
       <div className="d-flex p-2 bd-highlight">
-        <div className="card-header mb-4" style={{width: '100%', float:"center"}}>
+        <div className="card-header mb-1" style={{width: '100%', float:"center"}}>
           { this.state.listOfCategorys.map( category => {
             return (
               <div className="card-title btn-secondary" key={category._id}>
                 <Link to={`/categorys/${category._id}`}>
                   <h3 className="card-header btn-body text-light" >{category.title}     <span className="badge badge-primary badge-pill btn-dark">{category.recipes.length}<small href="###"> Recetas</small></span></h3>
                 </Link>
-                {/* 🥁 added so the recipes can be displayed:  🥁 */}
-                <ul className="list-group list-group-horizontal ml-4" >
+                {/* 🥁añadido para que las recetas se puedan mostrar   🥁 */}
+                {/*<ul className="list-group list-group-horizontal ml-4" >
                  { category.recipes.map((recipe, index) => { 
                     return <li className="list-group-item list-group-item-primary btn-danger" key={index}>{recipe.title} </li> 
                   }) }
-                </ul> 
+                </ul>*/} 
             
-                {/* <p style={{maxWidth: '400px'}} >{category.description} </p> */}
+                {/* <p style={{maxWidth: '800px'}} >{category.description} </p> */}
               </div>              
             )})
           }

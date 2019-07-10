@@ -30,19 +30,17 @@ class RecipeDetails extends Component {
     if(!this.state.title){
       this.getSingleRecipe();
     } else {
-    //                                                    {...props} => so we can have 'this.props.history' in Edit.js
-    //                                                                                          ^
-    //                                                                                          |
+                                                                                         
       return <EditRecipe theRecipe={this.state} getTheRecipe={this.getSingleRecipe} {...this.props} />
     }
   }
 
-// DELETE Recipe:
+// BORRAR Recipe:
   deleteRecipe = () => {
     const { params } = this.props.match;
     axios.delete(`http://localhost:5000/api/categorys/${params.id}/recipes/${params.recipeId}`)
     .then( () =>{
-        this.props.history.push('/recipes'); // !!!         
+        this.props.history.push('/recipes');     
     })
     .catch((err)=>{
         console.log(err)
@@ -53,7 +51,7 @@ class RecipeDetails extends Component {
     if(!this.state.title){
         this.getSingleRecipe();
       } else {     
-                // pass the recipe and method getSingleRecipe() as a props down to AddIngredient component
+                // pasa la receta y el método getSingleRecipe() como props al componente AddIngredient
         return <AddIngredient theRecipe={this.state} getTheRecipe={this.getSingleRecipe} />
       }
   }
@@ -69,10 +67,13 @@ class RecipeDetails extends Component {
 <div className="card-body">
         <p>{this.state.description}</p>
         <p>{this.state.measure}</p>
-        {/* show the ingredient heading only if there are ingredients */}</div>
+        {/* muestra el encabezado de ingredientes solo si hay ingredientes */}</div>
 
-        <small className="d-flex align-items-center btn btn-primary text-center text-white text-wrap font-weight-bold mb-2" onClick={() => this.deleteRecipe()}>Borrar Receta {/* <== !!! */}</small>
-        <small className="d-flex align-items-center btn btn-primary text-center text-white text-wrap font-weight-bold" >{this.renderAddIngredientForm()}</small>
+        {/* Botón Añadir Ingrediente Nuevo */}
+        <small className="d-flex align-items-center btn" >{this.renderAddIngredientForm()}</small>
+        {/* Botón Borrar Receta */}
+        <button class="btn btn-danger" onClick={() => this.deleteRecipe()}>
+          <i class="fa fa-trash-o fa-lg"></i> Borrar Receta</button>
   </div>
 </div>
 </div>
@@ -81,7 +82,7 @@ class RecipeDetails extends Component {
   <thead>
     <tr>
       <th scope="col">{ this.state.ingredients && this.state.ingredients.length > 0 && <h3>Ingredientes para {this.state.title} </h3> }
-        {/* map through the array of ingredients and... */}</th>
+        {/* map recorriendoi el array de ingredients y... */}</th>
     </tr>
   </thead>
   <tbody>
@@ -89,7 +90,7 @@ class RecipeDetails extends Component {
       <td>{ this.state.ingredients && this.state.ingredients.map((ingredient, index) => {
             return(
                 <div key={ index }>
-                {/* ... make each ingredient's title a link that goes to the ingredient details page */}
+                {/* ... hacer del nombre de cada ingrediente un Link que lleve al detalle de ingrediente */}
                     <Link to={`/categorys/${this.state._id}/recipes/${this.state.recipe._id}/ingredients/${ingredient._id}`}> 
                         { ingredient.name }
                     </Link>

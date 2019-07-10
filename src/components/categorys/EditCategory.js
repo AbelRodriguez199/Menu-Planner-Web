@@ -44,12 +44,12 @@ class EditCategory extends Component {
         <hr />
         <h3>Modificar Categoría</h3>
         <form onSubmit={this.handleFormSubmit}>
-          <label>Title:</label>
+          <label>Categoría:</label>
           <input type="text" name="title" value={this.state.title} onChange={e => this.handleChangeTitle(e)}/>
-          <label>Description:</label>
-          <textarea name="description" value={this.state.description} onChange={e => this.handleChangeDesc(e)} />
-          
-          <input type="submit" value="Modificar" />
+          <label>Descripción:</label>
+          <input name="description" value={this.state.description} onChange={e => this.handleChangeDesc(e)} />
+         
+          <input class="fa fa-cog" type="submit" value="Modificar" />
         </form>
       </div>
     )
