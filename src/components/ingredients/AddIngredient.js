@@ -63,7 +63,7 @@ class AddIngredient extends Component {
     return(
       <div>
             <button className="btn btn-info" onClick={() => this.toggleForm()}> 
-            <i class="fa fa-plus-circle fa-lg"></i> Añadir Ingrediente </button>
+            <i className="fa fa-plus-circle fa-lg"></i> Añadir Ingrediente </button>
             { this.showAddIngredientForm() }
       </div>
     )

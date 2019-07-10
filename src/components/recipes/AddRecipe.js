@@ -58,7 +58,7 @@ class AddRecipe extends Component {
     return(
       <div>
             <button className="btn btn-info" onClick={() => this.toggleForm()}> 
-             <i class="fa fa-plus-circle fa-lg"></i> Añadir Receta </button>
+             <i className="fa fa-plus-circle fa-lg"></i> Añadir Receta </button>
             { this.showAddRecipeForm() }
       </div>
     )

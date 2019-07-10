@@ -47,7 +47,7 @@ class RecipeList extends Component {
         
         <div className="btn  "style={{width: '50%', float:"left"}}>
         <div className="card title ">
-        <div class="card-header mb-4 btn-body ">
+        <div className="card-header mb-4 btn-body ">
           Añadir una Receta Nueva
             </div>
             <AddRecipe getData={() => this.getAllRecipe()}/> {/* <== !!! */}

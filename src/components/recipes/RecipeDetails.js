@@ -40,7 +40,7 @@ class RecipeDetails extends Component {
     const { params } = this.props.match;
     axios.delete(`http://localhost:5000/api/categorys/${params.id}/recipes/${params.recipeId}`)
     .then( () =>{
-        this.props.history.push('/recipes');     
+        this.props.history.push(`/categorys/${params.id}`);     
     })
     .catch((err)=>{
         console.log(err)
@@ -72,8 +72,8 @@ class RecipeDetails extends Component {
         {/* Botón Añadir Ingrediente Nuevo */}
         <small className="d-flex align-items-center btn" >{this.renderAddIngredientForm()}</small>
         {/* Botón Borrar Receta */}
-        <button class="btn btn-danger" onClick={() => this.deleteRecipe()}>
-          <i class="fa fa-trash-o fa-lg"></i> Borrar Receta</button>
+        <button className="btn btn-danger" onClick={() => this.deleteRecipe()}>
+          <i className="fa fa-trash-o fa-lg"></i> Borrar Receta</button>
   </div>
 </div>
 </div>

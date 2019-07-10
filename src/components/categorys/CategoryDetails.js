@@ -61,7 +61,7 @@ class CategoryDetails extends Component {
     return(
       <div>
          <div className="card">
-         <div class="card-header">
+         <div className="card-header">
         <div className="d-flex justify-content-center">
 <div className="p-2 bd-highlight"><h1>{this.state.title}</h1>
 <div className="card-body">
@@ -72,8 +72,8 @@ class CategoryDetails extends Component {
         <small className="d-flex align-items-center btn" >{this.renderAddRecipeForm()}</small>
         
         {/* Botón Borrar Categoría */}
-        <button class="btn btn-danger" onClick={() => this.deleteCategory()}>
-          <i class="fa fa-trash-o fa-lg"></i> Borrar Categoría</button>
+        <button className="btn btn-danger" onClick={() => this.deleteCategory()}>
+          <i className="fa fa-trash-o fa-lg"></i> Borrar Categoría</button>
         
   </div>
 </div>

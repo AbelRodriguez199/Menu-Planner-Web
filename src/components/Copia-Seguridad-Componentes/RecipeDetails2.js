@@ -63,10 +63,10 @@ class RecipeDetails extends Component {
     return(
       <div>
          <div className="card">
-         <div class="card-header">
+         <div className="card-header">
         <div className="d-flex justify-content-center">
 <div className="p-2 bd-highlight"><h1>{this.state.name}</h1>
-<div class="card-body">
+<div className="card-body">
         <p>{this.state.quantity}</p>
         <p>{this.state.measure}</p>
         {/* show the ingredient heading only if there are ingredients */}</div>
@@ -77,7 +77,7 @@ class RecipeDetails extends Component {
 </div>
 </div>
 </div>
-        <table class="table">
+        <table className="table">
   <thead>
     <tr>
       <th scope="col">{ this.state.ingredients && this.state.ingredients.length > 0 && <h3>Ingredientes para {this.state.title} </h3> }

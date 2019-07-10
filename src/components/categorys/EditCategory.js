@@ -49,7 +49,7 @@ class EditCategory extends Component {
           <label>Descripción:</label>
           <input name="description" value={this.state.description} onChange={e => this.handleChangeDesc(e)} />
          
-          <input class="fa fa-cog" type="submit" value="Modificar" />
+          <input className="fa fa-cog" type="submit" value="Modificar" />
         </form>
       </div>
     )

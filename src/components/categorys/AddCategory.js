@@ -31,7 +31,7 @@ class AddCategory extends Component {
       <div>
         <form onSubmit={this.handleFormSubmit}>
         <div className="form-group">
-          <label for="">Categoría:</label>
+          <label for="category">Categoría:</label>
           <input type="text" style={{width: '40%', float:"right"}} name="title" value={this.state.title} onChange={ e => this.handleChange(e)}/>
           </div>
           <div className="form-group">
