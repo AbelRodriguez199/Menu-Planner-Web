@@ -13,24 +13,24 @@ class Info extends Component {
 							<i className="fa fa-cog fa-spin fa-3x fa-fw " aria-hidden="true"></i>
 						</div>
 						<h4>Categorías</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.</p>
-						<p><small className="btn btn-md btn-outline-primary mt-2"><Link to="/categorys">Ver Categorías</Link></small></p>
+						<p>Crea tus propias categorías de Recetas para equilibrar tu menú semanal.</p>
+						<p><small className="btn btn-md btn-outline-primary mt-2"><Link to="/categorys">Ver Detalles</Link></small></p>
 					</div>
 					<div className="col-md-4 col-feature">
 						<div className="m-shadow-32 btn-success bgd-gradient-blue rounded-circle justify-center border border-secondary d-inline-block p-4 mb-4">
 							<em className="fa fa-3x fa-fw fa-spin fa-cutlery "></em>
 						</div>
 						<h4>Menú Semanal</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.</p>
-						<p><small className="btn btn-md btn-outline-primary mt-2" href="#" role="button">View details</small></p>
+						<p>Confecciona tu menú semanal para organizar tu lista de la compra y tu forma de cocinar.</p>
+						<p><small className="btn btn-md btn-outline-primary mt-2"><Link to="/menus">Ver Detalles</Link></small></p>
 					</div>
 					<div className="col-md-4 col-feature">
 						<div className=" m-shadow-32 btn-secondary	bgd-gradient-light-blue rounded-circle justify-center border border-secondary d-inline-block p-4 mb-4">
 							<em className="fa fa-3x fa-spin fa-list-alt"></em>
 						</div>
 						<h4>Lista de la Compra</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.</p>
-						<p><small className="btn btn-md btn-outline-primary mt-2" href="#" role="button">View details</small></p>
+						<p>Al crear tu propia organización de recetas con el menú semanal, crearás automáticamente tu lista de la compra.</p>
+						<p><small className="btn btn-md btn-outline-primary mt-2" href="#" role="button">Ver Detalles</small></p>
 					</div>
                 <div className="card col-12">
                 
