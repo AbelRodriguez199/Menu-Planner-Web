@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link, Router } from 'react-router-dom'
-import AddCategory from '../categorys/AddCategory';
+import { Link } from 'react-router-dom'
+//import AddCategory from '../categorys/AddCategory';
 import MenuTable from './MenuTable';
 
 class Menu extends Component {

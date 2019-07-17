@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import Info from './misc/info';
-import { MDBJumbotron, MDBBtn, MDBContainer, MDBView, MDBMask, MDBRow, MDBCol, MDBCardTitle, MDBIcon } from "mdbreact";
+import { MDBContainer, MDBView, MDBMask } from "mdbreact";
 
 
 class Home extends Component {
