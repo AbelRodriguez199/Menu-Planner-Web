@@ -9,9 +9,13 @@ import RecipeDetails from './components/recipes/RecipeDetails';
 import IngredientDetails from './components/ingredients/IngredientDetails';
 import Menu from './components/menu/Menu';
 import Home from './components/Home';
-import NavbarPage from './NavbarPage';
-
+import NavbarPage from './components/navbar/NavbarPage';
 //import FormUser from './components/user/FormUser';
+import MenuRandomList from './components/menu/MenuRandomList';
+import NotFound from './components/misc/NotFound';
+import MenuRandomBase from './components/menu/MenuRandomBase';
+
+
 class App extends Component {
   render() {
     return (
@@ -24,9 +28,12 @@ class App extends Component {
           {/* added to display recipe details page: */}
           <Route exact path="/categorys/:id/recipes/:recipeId" component={RecipeDetails} /> {/* <== !!! */}
           <Route exact path="/categorys/:id/recipes/:recipeId/ingredients/:ingredientId" component={IngredientDetails} /> {/* <== !!! */}
-          <Route exact path="/menus" component={Menu} />
+          <Route exact path="/random-menu" component={MenuRandomList} />
+          <Route exact path="/menus" component={MenuRandomBase} />
+          {/*<Route exact path="/menus/new" component={MenuRandomForm} />*/}
           <Route exact path="/" component={Home} />
           {/*<Route exact path="/formuser" component={FormUser} />*/}
+          <Route path="/" component={NotFound}/>
         </Switch>
      
         </main>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import { Link } from 'react-router-dom'
 import Info from './misc/info';
+import './Home.css';
 import { MDBContainer, MDBView, MDBMask } from "mdbreact";
 
 

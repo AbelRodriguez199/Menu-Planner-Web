@@ -1,0 +1,166 @@
+[
+    {
+        "lunes": {
+            "breakfast": {
+                "_id": "5d2fae06cee01b5f3ea93cde",
+                "title": "Crema de Calabacín",
+                "description": "dcsccc",
+                "category": "5d2f4acfde893537c1433d69",
+                "__v": 0
+            },
+            "lunch": {
+                "_id": "5d2fad01cee01b5f3ea93cd1",
+                "title": "Ensaladilla rusa",
+                "description": "sdofnsdovns",
+                "category": "5d2f4acfde893537c1433d69",
+                "__v": 0
+            },
+            "dinner": {
+                "_id": "5d2fad44cee01b5f3ea93cd5",
+                "title": "pechuga de pollo",
+                "description": "dvsdvcvc",
+                "category": "5d2f7f6acee01b5f3ea93ccb",
+                "__v": 0
+            }
+        },
+        "martes": {
+            "breakfast": {
+                "_id": "5d2fae67cee01b5f3ea93ce2",
+                "title": "Ensalada Brotes soja",
+                "description": "lsncohsdc",
+                "category": "5d2fada9cee01b5f3ea93cd9",
+                "__v": 0
+            },
+            "lunch": {
+                "_id": "5d2f6862383a733c4c649d7c",
+                "title": "Lasaña",
+                "description": "sdsdfds",
+                "category": "5d26330dac1a96132a612c29",
+                "__v": 0
+            },
+            "dinner": {
+                "_id": "5d2d79c58861e80efc185f2f",
+                "title": "crema de calabaza",
+                "description": "sdfsdfsd",
+                "__v": 0
+            }
+        },
+        "miercoles": {
+            "breakfast": {
+                "_id": "5d2663cc6aaa161b84df1a62",
+                "title": "risotto",
+                "description": "vcbbbcb",
+                "category": "5d2629ceac1a96132a612c23",
+                "__v": 0
+            },
+            "lunch": {
+                "_id": "5d2fad25cee01b5f3ea93cd3",
+                "title": "Cazón en Adobo",
+                "description": "xvxcvxcx",
+                "category": "5d2f5bc2383a733c4c649d77",
+                "__v": 0
+            },
+            "dinner": {
+                "_id": "5d2663ea6aaa161b84df1a63",
+                "title": "Arroz A Banda",
+                "description": "gfgfg",
+                "category": "5d2629ceac1a96132a612c23",
+                "__v": 0
+            }
+        },
+        "jueves": {
+            "breakfast": {
+                "_id": "5d2fae1ecee01b5f3ea93cdf",
+                "title": "boquerones en vinagre",
+                "description": "vsvknxcvx",
+                "category": "5d2f5bc2383a733c4c649d77",
+                "__v": 0
+            },
+            "lunch": {
+                "_id": "5d2f6859383a733c4c649d7b",
+                "title": "Macarrones",
+                "description": "vxcvxcvx",
+                "category": "5d26330dac1a96132a612c29",
+                "__v": 0
+            },
+            "dinner": {
+                "_id": "5d2fadefcee01b5f3ea93cdd",
+                "title": "canelones",
+                "description": "skdclskndvcsd",
+                "category": "5d26330dac1a96132a612c29",
+                "__v": 0
+            }
+        },
+        "viernes": {
+            "breakfast": {
+                "_id": "5d2d80c17df08c222ffdbb9d",
+                "title": "ensaladilla rusa",
+                "description": "sfsdfsdf",
+                "__v": 0
+            },
+            "lunch": {
+                "_id": "5d2fadefcee01b5f3ea93cdd",
+                "title": "canelones",
+                "description": "skdclskndvcsd",
+                "category": "5d26330dac1a96132a612c29",
+                "__v": 0
+            },
+            "dinner": {
+                "_id": "5d2fae35cee01b5f3ea93ce0",
+                "title": "Solomillo pimienta",
+                "description": "sdcghsd",
+                "category": "5d2f7f6acee01b5f3ea93ccb",
+                "__v": 0
+            }
+        },
+        "sabado": {
+            "breakfast": {
+                "_id": "5d2fae49cee01b5f3ea93ce1",
+                "title": "Guisantes con Jamon",
+                "description": "sxvfvfd",
+                "category": "5d2fad53cee01b5f3ea93cd6",
+                "__v": 0
+            },
+            "lunch": {
+                "_id": "5d2f6859383a733c4c649d7b",
+                "title": "Macarrones",
+                "description": "vxcvxcvx",
+                "category": "5d26330dac1a96132a612c29",
+                "__v": 0
+            },
+            "dinner": {
+                "_id": "5d2fae06cee01b5f3ea93cde",
+                "title": "Crema de Calabacín",
+                "description": "dcsccc",
+                "category": "5d2f4acfde893537c1433d69",
+                "__v": 0
+            }
+        },
+        "domingo": {
+            "breakfast": {
+                "_id": "5d2f5bd6383a733c4c649d78",
+                "title": "Dorada a la espalda",
+                "description": "svfdfvdfvdfvxc",
+                "category": "5d2f5bc2383a733c4c649d77",
+                "__v": 0
+            },
+            "lunch": {
+                "_id": "5d2fad37cee01b5f3ea93cd4",
+                "title": "chuletas de cordero",
+                "description": "sdsdsdvsd",
+                "category": "5d2f7f6acee01b5f3ea93ccb",
+                "__v": 0
+            },
+            "dinner": {
+                "_id": "5d2f6862383a733c4c649d7c",
+                "title": "Lasaña",
+                "description": "sdsdfds",
+                "category": "5d26330dac1a96132a612c29",
+                "__v": 0
+            }
+        },
+        "_id": "5d30aff6b3456242179f4f00",
+        "semana": "2019-07-18T17:44:22.676Z",
+        "__v": 0
+    }
+]

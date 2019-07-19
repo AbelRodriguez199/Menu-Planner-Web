@@ -28,7 +28,7 @@ class CategoryList extends Component {
         <div className="card-header mb-1" style={{width: '100%', float:"center"}}>
           { this.state.listOfCategorys.map( category => {
             return (
-              <div className="card-title btn-secondary" key={category._id}>
+              <div className="card-title stylish-color" key={category._id}>
                 <Link to={`/categorys/${category._id}`}>
                   <h3 className="card-header btn-body text-light" >{category.title}     <span className="badge badge-primary badge-pill btn-dark">{category.recipes.length}<small href="###"> Recetas</small></span></h3>
                 </Link>
